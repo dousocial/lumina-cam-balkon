@@ -341,7 +341,11 @@ section { padding: var(--space-8) 0; }
   padding: var(--space-8) 0;
 }
 @media (max-width: 960px) {
-  .hero-grid { grid-template-columns: 1fr; padding: var(--space-7) 0 var(--space-6); gap: var(--space-6); }
+  .hero {
+    background: linear-gradient(180deg, rgba(12, 10, 9, 0.78) 0%, rgba(12, 10, 9, 0.88) 72%, rgba(12, 10, 9, 0.98) 100%), url('../assets/photos/lumina-hero.webp') center top / cover no-repeat;
+  }
+  .hero::before { content: ""; position: absolute; inset: 0; background: linear-gradient(110deg, rgba(12,10,9,.55) 0%, rgba(12,10,9,.12) 62%, rgba(12,10,9,.58) 100%); pointer-events: none; }
+  .hero-grid { position: relative; z-index: 1; grid-template-columns: 1fr; padding: var(--space-7) 0 var(--space-6); gap: var(--space-6); }
 }
 
 .campaign-badge {
